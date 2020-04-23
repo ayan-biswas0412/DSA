@@ -12,6 +12,8 @@ void InsertatFirst(struct Node** head_ref, int new_data);
 
 int main()
 {
+   struct Node** head_ref;
+   
    struct Node* head = NULL;
    struct Node* second = NULL;
    struct Node* third = NULL;
@@ -31,6 +33,10 @@ int main()
 
    third->data = 3;
    third->next  = NULL;
+
+   head_ref = &head;
+
+   InsertatFirst(head_ref, 5);
 
    PrintList(head);
 
